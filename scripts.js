@@ -1,3 +1,5 @@
+// FOREACH FILTER
+
 const products = [
     {name:'Iphone',price:200},
     {name:'Motorola',price:70},
