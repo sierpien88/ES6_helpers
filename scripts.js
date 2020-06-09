@@ -86,3 +86,28 @@ const channel = [
  })
 
  console.log(premiumChannel);
+
+
+// FILETER HELPER EXCERCISE TWO
+// We will use the same channels example, but this time we have a user object, with some settings.
+// So we need to get the NOT premium channels and the PREMIUM CHANNELS whenever we call the methods. See  the USER object below.
+
+ const user = {
+    name:'Francis',
+    premium: true,
+    premiumChannels:function(){
+        // GET THE PREMIUM CHANNELS IS "PREMIUM" IS true
+        const $this = this;
+        return channel.filter(function(premium){
+            return premium.premium && $this.premium;
+        })
+    },
+    channels:function(){
+        // GET THE NON-PREMIUM CHANNELS
+        return channel.filter(function(nonPremium){
+            return nonPremium.premium == false;
+        })
+    }
+ }
+ console.log(user.premiumChannels())
+ // brings HBO and MAX
