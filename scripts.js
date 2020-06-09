@@ -68,4 +68,21 @@ const carsIndia = cars.map(function(car){
 
 });
 
-console.log(carsIndia)
+console.log(carsIndia);
+
+// FILETER HELPER EXCERCISE ONE
+// We have a list of channels and we want to create a new array only with the premium channels.
+
+const channel = [
+    {name:'HBO',premium:true},
+    {name:'LIFE',premium:false},
+    {name:'Max',premium:true},
+    {name:'Cooking channel',premium:false},
+    {name:'WOBI',premium:false}
+ ];
+
+ const premiumChannel = channel.filter(function(oneChannel){
+     return oneChannel.premium
+ })
+
+ console.log(premiumChannel);
